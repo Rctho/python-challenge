@@ -35,7 +35,6 @@ print("the total number of months is:", num_rows)
 #--------------------------------------------------------------------------------------
 
 #sum the total of column 2 to get the net total
-#list comprehension?
 #https://stackoverflow.com/questions/10657965/add-all-values-in-a-csv-column-in-python
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -67,5 +66,19 @@ with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
     for row in csvreader:
-          minnum = min(csvreader, key=lambda row: int(row[1]))
-print("The single greatest decrease was:", minnum)
+          minimum = min(csvreader, key=lambda row: int(row[1]))
+print("The single greatest decrease was:", minimum)
+
+#---------------------------------------------------------------
+
+#print to text file
+output_path = os.path.join ("new.txt")
+
+with open(output_path, 'w') as text2:
+    text2.write(f'the total number of months is: {num_rows}\n')
+    text2.write(f'The total value of Profits/Losses is: {Value_sum}\n')
+    text2.write(f'The average of Profits/Losses is: {average}\n')
+    text2.write(f'The single greatest increase was: {maxnum}\n')
+    text2.write(f'The single greatest decrease was: {minimum}\n')
+
+

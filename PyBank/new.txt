@@ -1,0 +1,5 @@
+the total number of months is: 87
+The total value of Profits/Losses is: 671099
+The average of Profits/Losses is: 7713.781609195402
+The single greatest increase was: ['Feb-2012', '1170593']
+The single greatest decrease was: ['Sep-2013', '-1196225']
